@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>교회 절기 현수막 연간 패키지</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C8954A;
+    --gold-light: #E8B86D;
+    --deep: #1A1A2E;
+    --navy: #16213E;
+    --cream: #FAF7F2;
+    --warm-gray: #F0EBE3;
+    --text: #2C2C2C;
+    --text-muted: #666;
+    --border: #DDD5C8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  /* ── HEADER ─────────────────────────────── */
+  .site-header {
+    background: #e6dcc4;
+    padding: 60px 40px 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .site-header::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 30% 50%, rgba(200,149,74,.18) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 50%, rgba(200,149,74,.10) 0%, transparent 60%);
+  }
+  .header-cross {
+    font-size: 38px;
+    margin-bottom: 14px;
+    display: block;
+    animation: fadeDown .7s ease both;
+  }
+  .site-header h1 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: clamp(26px, 5vw, 44px);
+    font-weight: 900;
+    color: #3a3a3a;
+    letter-spacing: -1px;
+    position: relative;
+    animation: fadeDown .7s .1s ease both;
+  }
+  .site-header h1 em {
+    color: #8b6b3a;
+    font-style: normal;
+  }
+  .header-sub {
+    margin-top: 12px;
+    color: rgba(255,255,255,.7);
+    font-size: 15px;
+    font-weight: 300;
+    position: relative;
+    animation: fadeDown .7s .2s ease both;
+  }
+  .header-badge {
+    display: inline-block;
+    margin-top: 18px;
+    background: var(--gold);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 6px 18px;
+    border-radius: 50px;
+    letter-spacing: 1px;
+    animation: fadeDown .7s .3s ease both;
+    position: relative;
+  }
+
+  @keyframes fadeDown {
+    from { opacity:0; transform:translateY(-16px); }
+    to   { opacity:1; transform:translateY(0); }
+  }
+
+  /* ── BENEFITS ────────────────────────────── */
+  .benefits-section {
+    background: #fff;
+    border-bottom: 2px solid var(--gold);
+    padding: 50px 40px;
+  }
+  .section-label {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-family: 'Noto Serif KR', serif;
+    text-align: center;
+    font-size: clamp(20px, 3.5vw, 30px);
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--deep);
+  }
+  .section-desc {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .benefit-card {
+    background: var(--warm-gray);
+    border-radius: 16px;
+    padding: 28px 24px;
+    border: 1px solid var(--border);
+    transition: transform .2s, box-shadow .2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .benefit-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  }
+  .benefit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,.1);
+  }
+  .benefit-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .benefit-card h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--deep);
+    line-height: 1.4;
+  }
+  .benefit-card p {
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.7;
+  }
+  .benefit-card .highlight {
+    color: var(--gold);
+    font-weight: 700;
+  }
+
+  /* ── TEMPLATES SECTION ───────────────────── */
+  .templates-section {
+    padding: 60px 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .template-block {
+    margin-bottom: 50px;
+  }
+  .template-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
+  .template-num {
+    background: var(--deep);
+    color: var(--gold-light);
+    font-family: 'Noto Serif KR', serif;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 6px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+  }
+  .template-header h2 {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--deep);
+  }
+  .template-header .season-date {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  .banner-wrap {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(0,0,0,.12);
+    position: relative;
+  }
+  /* Each banner is an SVG-rendered preview */
+  .banner-preview {
+    width: 100%;
+    display: block;
+  }
+
+  .template-note {
+    margin-top: 10px;
+    font-size: 12.5px;
+    color: var(--text-muted);
+    text-align: center;
+  }
+  .template-note strong {
+    color: var(--text);
+  }
+
+  /* ── DIVIDER ─────────────────────────────── */
+  .divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), transparent);
+    margin: 10px 0 50px;
+  }
+
+  /* ── CAUTIONS SECTION ────────────────────── */
+  .cautions-section {
+    background: var(--deep);
+    color: rgba(255,255,255,.85);
+    padding: 50px 40px;
+  }
+  .cautions-section .section-label { color: var(--gold-light); }
+  .cautions-section .section-title { color: #fff; }
+  .cautions-section .section-desc  { color: rgba(255,255,255,.5); }
+
+  .cautions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .caution-item {
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 12px;
+    padding: 20px 22px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .caution-icon {
+    font-size: 22px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .caution-item h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-bottom: 5px;
+  }
+  .caution-item p {
+    font-size: 12.5px;
+    color: rgba(255,255,255,.6);
+    line-height: 1.7;
+  }
+
+  /* ── LIGHTBOX ────────────────────────────── */
+  .banner-wrap img {
+    cursor: zoom-in;
+    transition: opacity .2s;
+  }
+  .banner-wrap img:hover {
+    opacity: .88;
+  }
+
+  #lightbox-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, .85);
+    backdrop-filter: blur(6px);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    animation: lbFadeIn .22s ease both;
+  }
+  #lightbox-overlay.active {
+    display: flex;
+  }
+  #lightbox-overlay img {
+    max-width: 95vw;
+    max-height: 90vh;
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0,0,0,.6);
+    object-fit: contain;
+    animation: lbZoomIn .25s ease both;
+  }
+  #lightbox-close {
+    position: fixed;
+    top: 18px;
+    right: 24px;
+    background: rgba(255,255,255,.15);
+    border: none;
+    color: #fff;
+    font-size: 28px;
+    line-height: 1;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .18s;
+  }
+  #lightbox-close:hover {
+    background: rgba(255,255,255,.3);
+  }
+
+  @keyframes lbFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  @keyframes lbZoomIn {
+    from { opacity: 0; transform: scale(.88); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+
+  /* ── FOOTER ─────────────────────────────── */
+  footer {
+    background: #0d0d1a;
+    text-align: center;
+    padding: 24px;
+    font-size: 12px;
+    color: rgba(255,255,255,.3);
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ HEADER ═══ -->
+<header class="site-header">
+  <span class="header-cross">✝</span>
+  <h1>교회 <em>절기 현수막</em> 연간 패키지</h1>
+  <p class="header-sub">5가지 주요 절기 현수막을 한 번에 · 1년 전 미리 예약하고 편하게 맞이하세요</p>
+  <span class="header-badge">CHURCH SEASONAL BANNER · 5 PACKAGE</span>
+</header>
+
+<!-- ═══ BENEFITS ═══ -->
+<section class="benefits-section">
+  <p class="section-label">미리 예약하면 이런 점이 좋아요</p>
+  <h2 class="section-title">연간 예약의 장점</h2>
+  <p class="section-desc">교회는 1년 일정을 미리 세워두는 만큼, 현수막도 한 번에 해결하세요.</p>
+
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <span class="benefit-icon">📅</span>
+      <h3>절기마다 신경 쓸 필요 없어요</h3>
+      <p>연간 6가지 절기 일정을 <span class="highlight">1년 전에 한 번만 예약</span>하면, 이후에는 별도로 챙기지 않아도 됩니다.</p>
+    </div>
+    <div class="benefit-card">
+      <span class="benefit-icon">📞</span>
+      <h3>제작 전 꼭 한 번 확인드려요</h3>
+      <p>인쇄 전에 <span class="highlight">수정 사항이 없는지 연락</span>을 드립니다. 변경이 필요하면 그때 말씀해 주시면 됩니다.</p>
+    </div>
+    <div class="benefit-card">
+      <span class="benefit-icon">🚚</span>
+      <h3>제작 후 교회로 바로 배송</h3>
+      <p>완성된 현수막을 <span class="highlight">교회 주소로 직접 택배</span> 발송합니다. 방문하거나 기다릴 필요가 없습니다.</p>
+    </div>
+    <div class="benefit-card">
+      <span class="benefit-icon">💰</span>
+      <h3>건별 주문보다 훨씬 경제적</h3>
+      <p>절기마다 따로 디자인 찾고 주문하면 비용이 높아집니다. 패키지로 하면 <span class="highlight">합리적인 가격</span>에 해결됩니다.</p>
+    </div>
+    <div class="benefit-card">
+      <span class="benefit-icon">🎨</span>
+      <h3>일관된 교회 브랜드 이미지</h3>
+      <p>매 절기마다 제각각인 디자인이 아니라, <span class="highlight">통일된 시리즈 스타일</span>로 교회 이미지가 정돈되어 보입니다.</p>
+    </div>
+    <div class="benefit-card">
+      <span class="benefit-icon">✏️</span>
+      <h3>수정은 언제든 가능해요</h3>
+      <p>담당 사역자나 주제 말씀이 바뀌어도 괜찮습니다. <span class="highlight">제작 전 연락 시 수정</span>을 반영해 드립니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TEMPLATES ═══ -->
+<main class="templates-section">
+  <p class="section-label" style="text-align:center">5가지 절기 디자인 미리보기</p>
+  <h2 class="section-title">현수막 템플릿</h2>
+  <p class="section-desc" style="margin-bottom:36px">교회 1년 주요 절기에 맞춘 현수막 디자인입니다. 문구·색상·로고 변경 가능합니다.</p>
+
+  <!-- ① 신년 예배 주간 -->
+  <div class="template-block">
+    <div class="template-header">
+      <span class="template-num">템플릿 01</span>
+      <h2>신년 예배 주간</h2>
+    </div>
+    <div class="banner-wrap">
+      <img src="image/1.png" alt="신년 예배 주간 현수막 미리보기" class="banner-preview">
+    </div>
+    <p class="template-note">▲ 교회명, 말씀, 날짜 변경 가능 · 색상 커스텀 가능 · <strong>천 현수막 / 실사 출력</strong> 선택 가능</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ② 부활절 감사예배 -->
+  <div class="template-block">
+    <div class="template-header">
+      <span class="template-num">템플릿 02</span>
+      <h2>부활절 감사예배</h2>
+    </div>
+    <div class="banner-wrap">
+      <img src="image/2.png" alt="부활절 감사예배 현수막 미리보기" class="banner-preview">
+    </div>
+    <p class="template-note">▲ 교회명, 말씀, 날짜 변경 가능 · 색상 커스텀 가능 · <strong>천 현수막 / 실사 출력</strong> 선택 가능</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ③ 여름 성경학교 -->
+  <div class="template-block">
+    <div class="template-header">
+      <span class="template-num">템플릿 03</span>
+      <h2>여름 성경학교</h2>
+    </div>
+    <div class="banner-wrap">
+      <img src="image/3.png" alt="여름 성경학교 현수막 미리보기" class="banner-preview">
+    </div>
+    <p class="template-note">▲ 교회명, 말씀, 날짜 변경 가능 · 색상 커스텀 가능 · <strong>천 현수막 / 실사 출력</strong> 선택 가능</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ④ 추수감사주일 -->
+  <div class="template-block">
+    <div class="template-header">
+      <span class="template-num">템플릿 04</span>
+      <h2>추수감사주일</h2>
+    </div>
+    <div class="banner-wrap">
+      <img src="image/4.png" alt="추수감사주일 현수막 미리보기" class="banner-preview">
+    </div>
+    <p class="template-note">▲ 교회명, 말씀, 날짜 변경 가능 · 색상 커스텀 가능 · <strong>천 현수막 / 실사 출력</strong> 선택 가능</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ⑤ 성탄절 감사예배 -->
+  <div class="template-block">
+    <div class="template-header">
+      <span class="template-num">템플릿 05</span>
+      <h2>성탄절 감사예배</h2>
+    </div>
+    <div class="banner-wrap">
+      <img src="image/5.png" alt="성탄절 감사예배 현수막 미리보기" class="banner-preview">
+    </div>
+    <p class="template-note">▲ 교회명, 말씀, 날짜 변경 가능 · 색상 커스텀 가능 · <strong>천 현수막 / 실사 출력</strong> 선택 가능</p>
+  </div>
+
+</main>
+
+<!-- ═══ CAUTIONS ═══ -->
+<section class="cautions-section">
+  <p class="section-label">꼭 확인하세요</p>
+  <h2 class="section-title">현수막 인쇄 일반 주의사항</h2>
+  <p class="section-desc" style="margin-bottom:36px">출력물 주문 전, 아래 내용을 반드시 확인해 주세요.</p>
+
+  <div class="cautions-grid">
+    <div class="caution-item">
+      <span class="caution-icon">🖥️</span>
+      <div>
+        <h4>모니터 색상과 실제 인쇄 색상이 다를 수 있습니다</h4>
+        <p>모니터는 RGB, 인쇄는 CMYK 방식으로 표현합니다. 화면에서 보이는 색과 인쇄 결과물은 다를 수 있으며, 이는 모든 인쇄물의 공통 특성입니다.</p>
+      </div>
+    </div>
+    <div class="caution-item">
+      <span class="caution-icon">📐</span>
+      <div>
+        <h4>사이즈는 반드시 정확히 확인해 주세요</h4>
+        <p>현수막 설치 장소의 가로·세로 사이즈를 미리 측정 후 주문하세요. 완성 후 사이즈 변경은 재제작으로 추가 비용이 발생합니다.</p>
+      </div>
+    </div>
+    <div class="caution-item">
+      <span class="caution-icon">🔤</span>
+      <div>
+        <h4>오탈자 최종 확인은 고객 책임입니다</h4>
+        <p>교회명, 날짜, 말씀 등의 내용은 최종 시안 확인 후 인쇄됩니다. 확인 후 발생한 오탈자는 재제작 비용이 발생할 수 있습니다.</p>
+      </div>
+    </div>
+    <div class="caution-item">
+      <span class="caution-icon">🌦️</span>
+      <div>
+        <h4>실외 설치 시 소재에 주의하세요</h4>
+        <p>실외용은 방수 원단 또는 폴리 소재를 권장합니다. 일반 천 소재는 비나 햇빛에 손상될 수 있으며, 자외선으로 시간이 지나면 색이 바랄 수 있습니다.</p>
+      </div>
+    </div>
+    <div class="caution-item">
+      <span class="caution-icon">📦</span>
+      <div>
+        <h4>배송 후 즉시 개봉하여 확인하세요</h4>
+        <p>배송 중 파손이나 오류가 있을 경우, 수령 당일 사진과 함께 연락 주셔야 교환이 가능합니다. 개봉 후 시간이 지나면 확인이 어려울 수 있습니다.</p>
+      </div>
+    </div>
+    <div class="caution-item">
+      <span class="caution-icon">⏰</span>
+      <div>
+        <h4>제작 기간을 충분히 확보하세요</h4>
+        <p>일반 제작은 주문 후 3~5 영업일이 소요됩니다. 절기 직전 주문 폭주 시 지연될 수 있으니, 연간 예약을 통해 여유 있게 준비하시길 권장합니다.</p>
+      </div>
+    </div>
+    <div class="caution-item">
+      <span class="caution-icon">🔩</span>
+      <div>
+        <h4>링(고리) 및 찍찍이 설치 옵션</h4>
+        <p>현수막 상단에 링(철 고리)이나 찍찍이(벨크로) 부착 여부를 주문 시 함께 말씀해 주세요. 기본 제공 사항이 아닐 수 있습니다.</p>
+      </div>
+    </div>
+    <div class="caution-item">
+      <span class="caution-icon">✏️</span>
+      <div>
+        <h4>디자인 파일 보유 시 저렴하게 진행 가능</h4>
+        <p>교회 로고나 이전에 작업된 ai·psd 파일이 있으면 더욱 빠르고 저렴하게 제작할 수 있습니다. 파일이 없어도 제작은 가능합니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 교회 절기 현수막 연간 패키지 · 문의: 담당자 연락처 안내</p>
+  <p style="margin-top:6px">본 템플릿 이미지의 교회명·말씀·날짜는 예시이며, 실제 주문 시 변경됩니다.</p>
+</footer>
+
+<!-- ═══ LIGHTBOX ═══ -->
+<div id="lightbox-overlay" role="dialog" aria-modal="true" aria-label="이미지 크게 보기">
+  <button id="lightbox-close" aria-label="닫기">✕</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+  (function () {
+    const overlay  = document.getElementById('lightbox-overlay');
+    const lbImg    = document.getElementById('lightbox-img');
+    const closeBtn = document.getElementById('lightbox-close');
+
+    // .banner-wrap 안의 모든 img에 클릭 이벤트 등록
+    document.querySelectorAll('.banner-wrap img').forEach(function (img) {
+      img.addEventListener('click', function () {
+        lbImg.src = img.src;
+        lbImg.alt = img.alt;
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    // 닫기 버튼
+    closeBtn.addEventListener('click', closeLightbox);
+
+    // 오버레이 배경 클릭으로 닫기 (이미지 클릭은 닫히지 않음)
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) closeLightbox();
+    });
+
+    // ESC 키로 닫기
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    function closeLightbox() {
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+      lbImg.src = '';
+    }
+  })();
+</script>
+</body>
+</html>
