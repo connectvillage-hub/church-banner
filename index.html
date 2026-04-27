@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>교회 절기 현수막 연간 패키지</title>
+<title>우리 교회 맞춤 절기 현수막</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -63,7 +63,7 @@
   }
   .header-sub {
     margin-top: 12px;
-    color: rgba(255,255,255,.7);
+    color: rgba(0, 0, 0, 0.7);
     font-size: 15px;
     font-weight: 300;
     position: relative;
@@ -120,7 +120,7 @@
 
   .benefits-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
     max-width: 1000px;
     margin: 0 auto;
@@ -342,6 +342,173 @@
     to   { opacity: 1; transform: scale(1); }
   }
 
+  /* ── ORDER FORM SECTION ─────────────────── */
+  .order-section {
+    background: #fff;
+    border-top: 2px solid var(--gold);
+    padding: 60px 40px;
+  }
+  .order-form {
+    max-width: 1000px;
+    margin: 36px auto 0;
+  }
+  .order-church-tag {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    background: var(--warm-gray);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--gold);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 28px;
+  }
+  .order-church-tag .tag-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 2px;
+  }
+  .order-church-tag .tag-name {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--deep);
+  }
+  .order-church-tag small {
+    margin-left: auto;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+  .season-block {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px 24px;
+    margin-bottom: 16px;
+  }
+  .season-block-title {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--deep);
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .season-block-title .num {
+    background: var(--gold);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+  }
+  .field-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .field label {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .field label .opt {
+    font-size: 11px;
+    color: var(--text-muted);
+    font-weight: 400;
+    margin-left: 4px;
+  }
+  .field input,
+  .field textarea {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+    font-family: inherit;
+    background: #fff;
+    color: var(--text);
+    transition: border-color .15s;
+  }
+  .field input:focus,
+  .field textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+  }
+  .field textarea {
+    resize: vertical;
+    min-height: 70px;
+    line-height: 1.5;
+  }
+  .field-grid .field.full {
+    grid-column: 1 / -1;
+  }
+  .order-submit {
+    display: block;
+    width: 100%;
+    margin-top: 24px;
+    background: var(--deep);
+    color: #fff;
+    border: none;
+    padding: 16px;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    letter-spacing: 2px;
+    transition: background .2s;
+  }
+  .order-submit:hover {
+    background: var(--gold);
+  }
+  .order-submit:disabled {
+    background: var(--text-muted);
+    cursor: not-allowed;
+  }
+  .order-status {
+    margin-top: 14px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 700;
+    min-height: 20px;
+  }
+  .order-status.success { color: #2d8f4e; }
+  .order-status.error   { color: #c5483a; }
+
+  @media (max-width: 600px) {
+    .field-grid { grid-template-columns: 1fr; }
+  }
+
+  /* ── CUSTOM TAG STRIP ───────────────────── */
+  .custom-tag-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 0 auto 36px;
+    max-width: 700px;
+  }
+  .custom-tag-strip span {
+    background: var(--warm-gray);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--deep);
+    padding: 6px 14px;
+    letter-spacing: .3px;
+  }
+
   /* ── FOOTER ─────────────────────────────── */
   footer {
     background: #0d0d1a;
@@ -356,57 +523,56 @@
 
 <!-- ═══ HEADER ═══ -->
 <header class="site-header">
-  <span class="header-cross">✝</span>
-  <h1>교회 <em>절기 현수막</em> 연간 패키지</h1>
-  <p class="header-sub">5가지 주요 절기 현수막을 한 번에 · 1년 전 미리 예약하고 편하게 맞이하세요</p>
-  <span class="header-badge">CHURCH SEASONAL BANNER · 5 PACKAGE</span>
+  <span class="header-cross"><img src="/image/logo.png" alt="교회 로고"></span>
+  <h1><span class="name">교회 이름</span> 맞춤 <em>절기 현수막</em></h1>
+  <p class="header-sub">교회명·색상·로고를 넣어 우리 교회에 맞게 직접 제작합니다.</p>
+  <span class="header-badge">맞춤 제작 · OUR CHURCH CUSTOM BANNER</span>
 </header>
 
 <!-- ═══ BENEFITS ═══ -->
 <section class="benefits-section">
-  <p class="section-label">미리 예약하면 이런 점이 좋아요</p>
-  <h2 class="section-title">연간 예약의 장점</h2>
-  <p class="section-desc">교회는 1년 일정을 미리 세워두는 만큼, 현수막도 한 번에 해결하세요.</p>
+  <h2 class="section-title">우리 교회만을 위한 맞춤 제작</h2>
+  <p class="section-desc">교회 이름·말씀·날짜·색상—전부 우리 교회에 맞게 바꿔서 만들어 드립니다.</p>
 
   <div class="benefits-grid">
     <div class="benefit-card">
-      <span class="benefit-icon">📅</span>
-      <h3>절기마다 신경 쓸 필요 없어요</h3>
-      <p>연간 6가지 절기 일정을 <span class="highlight">1년 전에 한 번만 예약</span>하면, 이후에는 별도로 챙기지 않아도 됩니다.</p>
+      <span class="benefit-icon">⛪</span>
+      <h3>우리 교회 이름이 들어갑니다</h3>
+      <p>교회명과 담임목사님 성함이 현수막에 <span class="highlight">그대로 새겨집니다.</span> 어디서나 파는 범용 문구가 아닙니다.</p>
     </div>
     <div class="benefit-card">
-      <span class="benefit-icon">📞</span>
-      <h3>제작 전 꼭 한 번 확인드려요</h3>
-      <p>인쇄 전에 <span class="highlight">수정 사항이 없는지 연락</span>을 드립니다. 변경이 필요하면 그때 말씀해 주시면 됩니다.</p>
-    </div>
-    <div class="benefit-card">
-      <span class="benefit-icon">🚚</span>
-      <h3>제작 후 교회로 바로 배송</h3>
-      <p>완성된 현수막을 <span class="highlight">교회 주소로 직접 택배</span> 발송합니다. 방문하거나 기다릴 필요가 없습니다.</p>
-    </div>
-    <div class="benefit-card">
-      <span class="benefit-icon">💰</span>
-      <h3>건별 주문보다 훨씬 경제적</h3>
-      <p>절기마다 따로 디자인 찾고 주문하면 비용이 높아집니다. 패키지로 하면 <span class="highlight">합리적인 가격</span>에 해결됩니다.</p>
+      <span class="benefit-icon">📖</span>
+      <h3>전할 말씀을 직접 넣으세요</h3>
+      <p>이번 절기에 전하고 싶은 <span class="highlight">주제 말씀·설교 제목</span>을 그대로 담습니다. 교회마다 다른 메시지가 살아납니다.</p>
     </div>
     <div class="benefit-card">
       <span class="benefit-icon">🎨</span>
-      <h3>일관된 교회 브랜드 이미지</h3>
-      <p>매 절기마다 제각각인 디자인이 아니라, <span class="highlight">통일된 시리즈 스타일</span>로 교회 이미지가 정돈되어 보입니다.</p>
+      <h3>색상도 우리 교회 스타일로</h3>
+      <p>교회 대표 색상이나 원하는 분위기로 <span class="highlight">색상을 맞춰</span> 드립니다. 다른 교회와 똑같아 보이지 않습니다.</p>
     </div>
     <div class="benefit-card">
-      <span class="benefit-icon">✏️</span>
-      <h3>수정은 언제든 가능해요</h3>
-      <p>담당 사역자나 주제 말씀이 바뀌어도 괜찮습니다. <span class="highlight">제작 전 연락 시 수정</span>을 반영해 드립니다.</p>
+      <span class="benefit-icon">🏷️</span>
+      <h3>교회 로고·심벌도 적용됩니다</h3>
+      <p>교회 로고나 심벌마크가 있다면 <span class="highlight">현수막에 그대로 넣어</span>드립니다.</p>
+    </div>
+    <div class="benefit-card">
+      <span class="benefit-icon">🖨️</span>
+      <h3>인쇄 전 시안으로 먼저 확인</h3>
+      <p>어떻게 완성되는지 <span class="highlight">시안을 먼저 확인</span>하신 뒤 인쇄합니다. 예상과 다르면 수정 후 진행합니다.</p>
+    </div>
+    <div class="benefit-card">
+      <span class="benefit-icon">📅</span>
+      <h3>1년치 맞춤 제작을 한 번에</h3>
+      <p>연간 예약으로 <span class="highlight">5가지 절기 현수막</span>을 미리 맞춥니다. 절기 때마다 처음부터 다시 맞춤 요청할 필요가 없습니다.</p>
     </div>
   </div>
 </section>
 
 <!-- ═══ TEMPLATES ═══ -->
 <main class="templates-section">
-  <p class="section-label" style="text-align:center">5가지 절기 디자인 미리보기</p>
-  <h2 class="section-title">현수막 템플릿</h2>
-  <p class="section-desc" style="margin-bottom:36px">교회 1년 주요 절기에 맞춘 현수막 디자인입니다. 문구·색상·로고 변경 가능합니다.</p>
+  <p class="section-label" style="text-align:center">우리 교회 맞춤 제작 디자인</p>
+  <h2 class="section-title">절기별 맞춤 현수막 디자인</h2>
+  <p class="section-desc" style="margin-bottom:20px">디자인을 눌러보시면, <strong style="color:var(--deep)">큰 이미지로 볼 수 있습니다.</strong></p>
 
   <!-- ① 신년 예배 주간 -->
   <div class="template-block">
@@ -417,7 +583,7 @@
     <div class="banner-wrap">
       <img src="image/1.png" alt="신년 예배 주간 현수막 미리보기" class="banner-preview">
     </div>
-    <p class="template-note">▲ 교회명, 말씀, 날짜 변경 가능 · 색상 커스텀 가능 · <strong>천 현수막 / 실사 출력</strong> 선택 가능</p>
+    <p class="template-note">▲ 교회명·담임목사명·말씀·날짜가 <strong>우리 교회 내용으로 교체</strong>됩니다 · 색상·로고 반영 가능 · 천 현수막 / 실사 출력 선택</p>
   </div>
 
   <div class="divider"></div>
@@ -431,7 +597,7 @@
     <div class="banner-wrap">
       <img src="image/2.png" alt="부활절 감사예배 현수막 미리보기" class="banner-preview">
     </div>
-    <p class="template-note">▲ 교회명, 말씀, 날짜 변경 가능 · 색상 커스텀 가능 · <strong>천 현수막 / 실사 출력</strong> 선택 가능</p>
+    <p class="template-note">▲ 교회명·담임목사명·말씀·날짜가 <strong>우리 교회 내용으로 교체</strong>됩니다 · 색상·로고 반영 가능 · 천 현수막 / 실사 출력 선택</p>
   </div>
 
   <div class="divider"></div>
@@ -445,7 +611,7 @@
     <div class="banner-wrap">
       <img src="image/3.png" alt="여름 성경학교 현수막 미리보기" class="banner-preview">
     </div>
-    <p class="template-note">▲ 교회명, 말씀, 날짜 변경 가능 · 색상 커스텀 가능 · <strong>천 현수막 / 실사 출력</strong> 선택 가능</p>
+    <p class="template-note">▲ 교회명·담임목사명·말씀·날짜가 <strong>우리 교회 내용으로 교체</strong>됩니다 · 색상·로고 반영 가능 · 천 현수막 / 실사 출력 선택</p>
   </div>
 
   <div class="divider"></div>
@@ -459,7 +625,7 @@
     <div class="banner-wrap">
       <img src="image/4.png" alt="추수감사주일 현수막 미리보기" class="banner-preview">
     </div>
-    <p class="template-note">▲ 교회명, 말씀, 날짜 변경 가능 · 색상 커스텀 가능 · <strong>천 현수막 / 실사 출력</strong> 선택 가능</p>
+    <p class="template-note">▲ 교회명·담임목사명·말씀·날짜가 <strong>우리 교회 내용으로 교체</strong>됩니다 · 색상·로고 반영 가능 · 천 현수막 / 실사 출력 선택</p>
   </div>
 
   <div class="divider"></div>
@@ -473,16 +639,96 @@
     <div class="banner-wrap">
       <img src="image/5.png" alt="성탄절 감사예배 현수막 미리보기" class="banner-preview">
     </div>
-    <p class="template-note">▲ 교회명, 말씀, 날짜 변경 가능 · 색상 커스텀 가능 · <strong>천 현수막 / 실사 출력</strong> 선택 가능</p>
+    <p class="template-note">▲ 교회명·담임목사명·말씀·날짜가 <strong>우리 교회 내용으로 교체</strong>됩니다 · 색상·로고 반영 가능 · 천 현수막 / 실사 출력 선택</p>
   </div>
 
 </main>
 
+<!-- ═══ ORDER FORM ═══ -->
+<section class="order-section" id="order">
+  <p class="section-label">주문 정보 보내기</p>
+  <h2 class="section-title">우리 교회 절기 일정 알려주세요</h2>
+  <p class="section-desc">아래 정보를 보내주시면, 시안에 정보를 넣어 최종 확인 요청드립니다.</p>
+
+  <form class="order-form" id="orderForm">
+
+    <div class="order-church-tag">
+      <span class="tag-label">교회명</span>
+      <span class="tag-name name">○○교회</span>
+      <small>※ 발송된 링크에 따라 자동 입력됩니다</small>
+    </div>
+    <input type="hidden" name="church" id="churchHidden">
+
+    <!-- ① 신년 -->
+    <div class="season-block">
+      <div class="season-block-title"><span class="num">01</span> 신년 예배 주간</div>
+      <div class="field-grid">
+        <div class="field"><label>행사 일정</label><input type="text" name="s1_date" placeholder="예: 2026년 1월 5일(주일) 오전 11시"></div>
+        <div class="field"><label>행사 장소</label><input type="text" name="s1_place" placeholder="예: 본당"></div>
+        <div class="field"><label>진행 목사님 <span class="opt">(선택)</span></label><input type="text" name="s1_pastor" placeholder="예: 홍길동 목사"></div>
+        <div class="field"><label>주제 말씀 <span class="opt">(선택)</span></label><input type="text" name="s1_verse" placeholder="예: 시편 90:12"></div>
+        <div class="field full"><label>디자인 시안 수정요청사항 <span class="opt">(선택)</span></label><textarea name="s1_request" placeholder="예: 색상은 은은한 푸른색 계열로, 십자가 위치는 좌측 상단으로 부탁드립니다."></textarea></div>
+      </div>
+    </div>
+
+    <!-- ② 부활절 -->
+    <div class="season-block">
+      <div class="season-block-title"><span class="num">02</span> 부활절 감사예배</div>
+      <div class="field-grid">
+        <div class="field"><label>행사 일정</label><input type="text" name="s2_date" placeholder="예: 2026년 4월 5일(주일)"></div>
+        <div class="field"><label>행사 장소</label><input type="text" name="s2_place"></div>
+        <div class="field"><label>진행 목사님 <span class="opt">(선택)</span></label><input type="text" name="s2_pastor"></div>
+        <div class="field"><label>주제 말씀 <span class="opt">(선택)</span></label><input type="text" name="s2_verse"></div>
+        <div class="field full"><label>디자인 시안 수정요청사항 <span class="opt">(선택)</span></label><textarea name="s2_request" placeholder="예: 부활의 기쁨이 느껴지도록 밝고 환한 색감으로, 백합 이미지를 추가해 주세요."></textarea></div>
+      </div>
+    </div>
+
+    <!-- ③ 여름 성경학교 -->
+    <div class="season-block">
+      <div class="season-block-title"><span class="num">03</span> 여름 성경학교</div>
+      <div class="field-grid">
+        <div class="field"><label>행사 일정</label><input type="text" name="s3_date" placeholder="예: 2026년 7월 28일~30일"></div>
+        <div class="field"><label>행사 장소</label><input type="text" name="s3_place"></div>
+        <div class="field"><label>진행 목사님 <span class="opt">(선택)</span></label><input type="text" name="s3_pastor"></div>
+        <div class="field"><label>주제 말씀 <span class="opt">(선택)</span></label><input type="text" name="s3_verse"></div>
+        <div class="field full"><label>디자인 시안 수정요청사항 <span class="opt">(선택)</span></label><textarea name="s3_request" placeholder="예: 어린이가 좋아할 만한 활기찬 컬러와 일러스트, 캐릭터 이미지를 추가해 주세요."></textarea></div>
+      </div>
+    </div>
+
+    <!-- ④ 추수감사주일 -->
+    <div class="season-block">
+      <div class="season-block-title"><span class="num">04</span> 추수감사주일</div>
+      <div class="field-grid">
+        <div class="field"><label>행사 일정</label><input type="text" name="s4_date" placeholder="예: 2026년 11월 15일(주일)"></div>
+        <div class="field"><label>행사 장소</label><input type="text" name="s4_place"></div>
+        <div class="field"><label>진행 목사님 <span class="opt">(선택)</span></label><input type="text" name="s4_pastor"></div>
+        <div class="field"><label>주제 말씀 <span class="opt">(선택)</span></label><input type="text" name="s4_verse"></div>
+        <div class="field full"><label>디자인 시안 수정요청사항 <span class="opt">(선택)</span></label><textarea name="s4_request" placeholder="예: 가을 분위기의 따뜻한 색감, 곡식·열매 이미지를 메인으로 부탁드립니다."></textarea></div>
+      </div>
+    </div>
+
+    <!-- ⑤ 성탄절 -->
+    <div class="season-block">
+      <div class="season-block-title"><span class="num">05</span> 성탄절 감사예배</div>
+      <div class="field-grid">
+        <div class="field"><label>행사 일정</label><input type="text" name="s5_date" placeholder="예: 2026년 12월 25일"></div>
+        <div class="field"><label>행사 장소</label><input type="text" name="s5_place"></div>
+        <div class="field"><label>진행 목사님 <span class="opt">(선택)</span></label><input type="text" name="s5_pastor"></div>
+        <div class="field"><label>주제 말씀 <span class="opt">(선택)</span></label><input type="text" name="s5_verse"></div>
+        <div class="field full"><label>디자인 시안 수정요청사항 <span class="opt">(선택)</span></label><textarea name="s5_request" placeholder="예: 성탄 분위기 살린 골드/레드 톤, 별·트리 모티프를 강조해 주세요."></textarea></div>
+      </div>
+    </div>
+
+    <button type="submit" class="order-submit">주문 정보 보내기</button>
+    <p class="order-status" id="orderStatus"></p>
+  </form>
+</section>
+
 <!-- ═══ CAUTIONS ═══ -->
 <section class="cautions-section">
-  <p class="section-label">꼭 확인하세요</p>
-  <h2 class="section-title">현수막 인쇄 일반 주의사항</h2>
-  <p class="section-desc" style="margin-bottom:36px">출력물 주문 전, 아래 내용을 반드시 확인해 주세요.</p>
+  <p class="section-label">맞춤 제작 전 꼭 확인하세요</p>
+  <h2 class="section-title">주문 전 안내사항</h2>
+  <p class="section-desc" style="margin-bottom:36px">우리 교회 정보로 제작하기 전, 아래 내용을 함께 확인해 주세요.</p>
 
   <div class="cautions-grid">
     <div class="caution-item">
@@ -502,7 +748,7 @@
     <div class="caution-item">
       <span class="caution-icon">🔤</span>
       <div>
-        <h4>오탈자 최종 확인은 고객 책임입니다</h4>
+        <h4>오탈자 최종 확인은 꼭 해주셔야 합니다</h4>
         <p>교회명, 날짜, 말씀 등의 내용은 최종 시안 확인 후 인쇄됩니다. 확인 후 발생한 오탈자는 재제작 비용이 발생할 수 있습니다.</p>
       </div>
     </div>
@@ -534,19 +780,11 @@
         <p>현수막 상단에 링(철 고리)이나 찍찍이(벨크로) 부착 여부를 주문 시 함께 말씀해 주세요. 기본 제공 사항이 아닐 수 있습니다.</p>
       </div>
     </div>
-    <div class="caution-item">
-      <span class="caution-icon">✏️</span>
-      <div>
-        <h4>디자인 파일 보유 시 저렴하게 진행 가능</h4>
-        <p>교회 로고나 이전에 작업된 ai·psd 파일이 있으면 더욱 빠르고 저렴하게 제작할 수 있습니다. 파일이 없어도 제작은 가능합니다.</p>
-      </div>
-    </div>
   </div>
 </section>
 
 <footer>
-  <p>© 교회 절기 현수막 연간 패키지 · 문의: 담당자 연락처 안내</p>
-  <p style="margin-top:6px">본 템플릿 이미지의 교회명·말씀·날짜는 예시이며, 실제 주문 시 변경됩니다.</p>
+  <p>Copyright @2026. Convil Inc. all rights reserved</p>
 </footer>
 
 <!-- ═══ LIGHTBOX ═══ -->
@@ -556,6 +794,66 @@
 </div>
 
 <script>
+  /* ───── URL 파라미터로 교회명 자동 입력 ───── */
+  (function () {
+    const params = new URLSearchParams(window.location.search);
+    const churchName = params.get('church') || '○○교회';
+    document.querySelectorAll('.name').forEach(function (el) {
+      el.textContent = churchName;
+    });
+    const hidden = document.getElementById('churchHidden');
+    if (hidden) hidden.value = churchName;
+    document.title = churchName + ' 맞춤 절기 현수막';
+  })();
+
+  /* ───── 주문 폼 → Google Sheets 전송 ───── */
+  (function () {
+    // ⚠ 아래 URL을 Google Apps Script 배포 URL로 교체하세요.
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyrwCEn_uLPJgBNR9bVqv170tN4pt0Lk4-o4bBinbzTCAVBJkIfU4pNn0P-zJpTK8jCdQ/exec';
+
+    const form      = document.getElementById('orderForm');
+    const status    = document.getElementById('orderStatus');
+    const submitBtn = form.querySelector('.order-submit');
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      if (SCRIPT_URL.startsWith('YOUR_')) {
+        status.textContent = '⚠ Apps Script URL이 설정되지 않았습니다. (관리자 확인 필요)';
+        status.className   = 'order-status error';
+        return;
+      }
+
+      submitBtn.disabled    = true;
+      submitBtn.textContent = '전송 중...';
+      status.textContent    = '';
+
+      try {
+        const formData = new FormData(form);
+        await fetch(SCRIPT_URL, {
+          method: 'POST',
+          mode:   'no-cors',
+          body:   new URLSearchParams(formData)
+        });
+        status.textContent = '✓ 주문 정보가 전송되었습니다. 확인 후 시안을 보내드립니다.';
+        status.className   = 'order-status success';
+        form.reset();
+        const hidden = document.getElementById('churchHidden');
+        if (hidden) {
+          const params = new URLSearchParams(window.location.search);
+          hidden.value = params.get('church') || '○○교회';
+        }
+      } catch (err) {
+        status.textContent = '⚠ 전송에 실패했습니다. 잠시 후 다시 시도해 주세요.';
+        status.className   = 'order-status error';
+      } finally {
+        submitBtn.disabled    = false;
+        submitBtn.textContent = '주문 정보 보내기';
+      }
+    });
+  })();
+
+  /* ───── Lightbox ───── */
   (function () {
     const overlay  = document.getElementById('lightbox-overlay');
     const lbImg    = document.getElementById('lightbox-img');
