@@ -342,6 +342,127 @@
     to   { opacity: 1; transform: scale(1); }
   }
 
+  /* ── BANNER SPEC SECTION ────────────────── */
+  .spec-section {
+    background: #fff;
+    border-top: 2px solid var(--gold);
+    padding: 60px 40px;
+  }
+  .spec-grid {
+    max-width: 1000px;
+    margin: 36px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .spec-row {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 20px;
+    align-items: start;
+    padding: 20px 22px;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--gold);
+    border-radius: 12px;
+  }
+  .spec-label {
+    font-family: 'Noto Serif KR', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--deep);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-top: 9px;
+  }
+  .spec-label .req {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    background: var(--gold);
+    color: #fff;
+    padding: 2px 7px;
+    border-radius: 4px;
+    letter-spacing: .5px;
+  }
+  .spec-fixed {
+    display: inline-block;
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    align-self: center;
+  }
+  .spec-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .spec-options.vert {
+    flex-direction: column;
+  }
+  .spec-radio {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    background: #fff;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    transition: all .15s;
+  }
+  .spec-radio:hover {
+    border-color: var(--gold-light);
+  }
+  .spec-radio input[type=radio] {
+    margin: 0;
+    accent-color: var(--gold);
+    flex-shrink: 0;
+  }
+  .spec-radio:has(input[type=radio]:checked) {
+    border-color: var(--gold);
+    background: var(--warm-gray);
+    color: var(--deep);
+  }
+  .spec-radio.big {
+    align-items: flex-start;
+    padding: 16px 18px;
+  }
+  .spec-radio.big input[type=radio] {
+    margin-top: 4px;
+  }
+  .spec-radio .rt-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--deep);
+    margin-bottom: 4px;
+  }
+  .spec-radio .rt-desc {
+    font-size: 12.5px;
+    font-weight: 400;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+  .spec-radio .rt-desc strong {
+    color: var(--gold);
+    font-weight: 700;
+  }
+  @media (max-width: 600px) {
+    .spec-row {
+      grid-template-columns: 1fr;
+    }
+    .spec-label {
+      padding-top: 0;
+    }
+  }
+
   /* ── ORDER FORM SECTION ─────────────────── */
   .order-section {
     background: #fff;
@@ -643,6 +764,69 @@
   </div>
 
 </main>
+
+<!-- ═══ BANNER SPEC ═══ -->
+<section class="spec-section">
+  <p class="section-label">현수막 사양</p>
+  <h2 class="section-title">제작 사양 안내</h2>
+  <p class="section-desc">아래 사양으로 제작됩니다. <strong style="color:var(--deep)">사이즈와 마감방법</strong>은 직접 선택해 주세요.</p>
+
+  <div class="spec-grid">
+
+    <!-- 형태 (고정) -->
+    <div class="spec-row">
+      <div class="spec-label">형태</div>
+      <div class="spec-fixed">가로 현수막</div>
+    </div>
+
+    <!-- 사이즈 (선택) -->
+    <div class="spec-row">
+      <div class="spec-label">사이즈 <span class="req">선택</span></div>
+      <div class="spec-options">
+        <label class="spec-radio">
+          <input type="radio" name="size" value="5000x900" form="orderForm" required>
+          <span>5000 × 900 mm &#40;표준형&#41;</span>
+        </label>
+        <label class="spec-radio">
+          <input type="radio" name="size" value="4000x700" form="orderForm">
+          <span>4000 × 700 mm</span>
+        </label>
+        <label class="spec-radio">
+          <input type="radio" name="size" value="2500x700" form="orderForm">
+          <span>2500 × 700 mm</span>
+        </label>
+      </div>
+    </div>
+
+    <!-- 소재 (고정) -->
+    <div class="spec-row">
+      <div class="spec-label">소재</div>
+      <div class="spec-fixed">현수막천</div>
+    </div>
+
+    <!-- 마감방법 (선택) -->
+    <div class="spec-row">
+      <div class="spec-label">마감방법 <span class="req">선택</span></div>
+      <div class="spec-options vert">
+        <label class="spec-radio big">
+          <input type="radio" name="finishing" value="원형막대+로프" form="orderForm" required>
+          <div>
+            <div class="rt-title">원형막대 + 로프</div>
+            <div class="rt-desc">현수막 양쪽 끝에 원형 나무 막대를 넣어 바람이 불어도 안정되고 튼튼합니다. <strong>실외 사용에 적합</strong> · 로프 길이 20m</div>
+          </div>
+        </label>
+        <label class="spec-radio big">
+          <input type="radio" name="finishing" value="금속링+로프" form="orderForm">
+          <div>
+            <div class="rt-title">금속링 + 로프</div>
+            <div class="rt-desc">네 모서리에 금속링(아일렛) 처리가 되어 로프를 연결해 설치하기 편리합니다. <strong>실내 사용에 적합</strong> · 로프 길이 10m</div>
+          </div>
+        </label>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 <!-- ═══ ORDER FORM ═══ -->
 <section class="order-section" id="order">
